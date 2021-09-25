@@ -7,9 +7,9 @@
 #include <sstream>
 #include <fstream>
 
-class Framework {
+class AnimationFramework {
 public:
-	Framework();
+	AnimationFramework();
 
 private:
 	//total count of animation frames (count number of image files loaded)
@@ -38,7 +38,6 @@ private:
 
 protected:
 	void setLengthOfVector();
-	void setFramesPerSecond();
 	void setWaitTime();
 };
 

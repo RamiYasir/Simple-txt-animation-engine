@@ -5,9 +5,10 @@
 #include <fstream>
 #include <thread>
 #include <memory>
-#include "Framework.h"
+#include "AnimationFramework.h"
+#include "InputFramework.h"
 
-class Character : public Framework{
+class Character : public AnimationFramework, public InputFramework{
 public:
 	Character();
 
