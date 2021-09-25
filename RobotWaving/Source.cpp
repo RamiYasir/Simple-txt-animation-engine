@@ -5,17 +5,15 @@
 
 int main() {
 	
-	//using namespace std::literals;
+	using namespace std::chrono_literals;
 
-	//std::chrono::time_point<std::chrono::steady_clock> start = std::chrono::steady_clock::now();
+	//char alphabet[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+	//int someNumber = 1000 / 24;
 
-	//std::this_thread::sleep_for(1s);
-
-	//std::cout << "1 second has passed\n";
-
-	//std::this_thread::sleep_for(1s);
-
-	//std::cout << "2 second have passed";
+	//for (int i = 0; i < 26; i++) {
+	//	std::this_thread::sleep_for(std::chrono::milliseconds(someNumber));
+	//	std::cout << alphabet[i] << " " << std::endl;
+	//}
 
 	bool isRunning = true;
 	Character robot;
@@ -26,3 +24,4 @@ int main() {
 
 	return 0;
 }
+

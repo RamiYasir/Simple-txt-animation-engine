@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <chrono>
+#include <sstream>
 #include <fstream>
 
 class Framework {
@@ -16,6 +18,9 @@ private:
 	int m_lengthOfVector{ 0 };
 	int m_framesPerSecond{ 0 };
 
+protected:
+	int m_waitTime{ 1 };
+
 
 protected:
 	std::vector<std::string> m_pathsToFiles;
@@ -26,11 +31,15 @@ public:
 	void setCurrentPathToFile();
 	int getLengthOfVector();
 	int getFramesPerSecond();
-//	playAnimation();
+	int getWaitTime();
+
+private:
+	bool handleFPSInputErrors(int framesPerSecond);
 
 protected:
 	void setLengthOfVector();
 	void setFramesPerSecond();
+	void setWaitTime();
 };
 
 

@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <fstream>
-#include <chrono>
 #include <thread>
+#include <memory>
 #include "Framework.h"
 
 class Character : public Framework{
@@ -15,7 +15,6 @@ private:
 	std::ifstream m_animationFile;
 	std::string m_pathToFrame{ "Don Quoixte(?)" };
 	int m_frameCounter{ 0 };
-	int fps{ 0 };
 
 public:
 	void printAnimation();

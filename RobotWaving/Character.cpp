@@ -1,17 +1,11 @@
 #include "Character.h"
 
-Character::Character() {
-	fps = Framework::getFramesPerSecond();
-
-}
+Character::Character() {}
 
 
 void Character::waitForNextFrame() {
-	using namespace std::literals;
-
-	//how to get fps to equal a time??
-	//I don't know how to convert from a type of int to the std::chrono::second/milliseconds, etc.
-	std::this_thread::sleep_for(88.33ms);
+	int number = Framework::m_waitTime;
+	std::this_thread::sleep_for(std::chrono::milliseconds(Framework::m_waitTime));
 }
 
 
@@ -19,7 +13,7 @@ std::string Character::getCurrentPathToFrame(int vectorIndex) {
 
 	m_pathToFrame = Framework::m_pathsToFiles[vectorIndex];
 
-	std::cout << "Your file says this: " + m_pathToFrame;
+	std::cout << "Your file says this: " << m_pathToFrame;
 	return m_pathToFrame;
 
 }

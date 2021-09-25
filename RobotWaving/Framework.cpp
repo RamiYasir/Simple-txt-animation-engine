@@ -4,6 +4,7 @@ Framework::Framework() {
 	m_pathsToFiles = storePathsToFiles(m_pathsToFiles);
 	setLengthOfVector();
 	setFramesPerSecond();
+	setWaitTime();
 }
 
 std::vector<std::string> Framework::storePathsToFiles(std::vector<std::string>& pathsToFrames) {
@@ -16,11 +17,42 @@ void Framework::setLengthOfVector() { m_lengthOfVector = m_pathsToFiles.size(); 
 
 int Framework::getLengthOfVector() { return m_lengthOfVector; }
 
-void Framework::setFramesPerSecond() { m_framesPerSecond = 24; }
+void Framework::setFramesPerSecond() {
+	std::string userInput;
+	int framesPerSecond;
+
+	do {
+		std::cout << "Please choose frames per second:\n60, 30, 24, 12: ";
+		std::cin >> userInput;
+		std::stringstream(userInput) >> framesPerSecond;
+
+	}while(!handleFPSInputErrors(framesPerSecond));
+
+	m_framesPerSecond = framesPerSecond;
+
+//	assignWaitTime(framesPerSecond);
+ 
+	std::cout << std::endl;
+
+
+	}
 
 int Framework::getFramesPerSecond() { return m_framesPerSecond; }
 
+bool Framework::handleFPSInputErrors(int framesPerSecond) {
+	if (framesPerSecond != 12 && framesPerSecond != 24 && framesPerSecond != 30 && framesPerSecond != 60) {
+		std::cout << "invalid input, please try again \n";
+		return false;
+	}
+	else {
+		std::cout << "Thank you. Enjoy your animation!\n";
+		return true;
+	}
+}
 
+void Framework::setWaitTime() { m_waitTime = 1000 / m_framesPerSecond; }
+
+int Framework::getWaitTime() { return m_waitTime; }
 
 
 
