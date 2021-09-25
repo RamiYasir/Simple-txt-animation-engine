@@ -9,7 +9,7 @@ Framework::Framework() {
 
 std::vector<std::string> Framework::storePathsToFiles(std::vector<std::string>& pathsToFrames) {
 	pathsToFrames = { "assets/helloWorld1.txt", "assets/helloWorld2.txt", "assets/helloWorld3.txt", "assets/helloWorld4.txt",
-					"assets/helloWorld5.txt", };
+					"assets/helloWorld5.txt", "assets/helloWorld6.txt"};
 	return pathsToFrames;
 }
 
@@ -29,8 +29,6 @@ void Framework::setFramesPerSecond() {
 	}while(!handleFPSInputErrors(framesPerSecond));
 
 	m_framesPerSecond = framesPerSecond;
-
-//	assignWaitTime(framesPerSecond);
  
 	std::cout << std::endl;
 

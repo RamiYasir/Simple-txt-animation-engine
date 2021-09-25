@@ -12,8 +12,6 @@ void Character::waitForNextFrame() {
 std::string Character::getCurrentPathToFrame(int vectorIndex) {
 
 	m_pathToFrame = Framework::m_pathsToFiles[vectorIndex];
-
-	std::cout << "Your file says this: " << m_pathToFrame;
 	return m_pathToFrame;
 
 }
@@ -21,8 +19,9 @@ std::string Character::getCurrentPathToFrame(int vectorIndex) {
 void Character::printAnimation() {
 	for (int i = 0; i < Framework::getLengthOfVector(); i++) {
 		printFrame();
-		printNewLines();
 		waitForNextFrame();
+//		clearScreen();
+		printNewLines();
 		m_frameCounter++;
 		if (m_frameCounter % Framework::getLengthOfVector() == 0) {
 			m_frameCounter = 0;
@@ -37,5 +36,5 @@ void Character::printFrame() {
 }
 
 void Character::printNewLines() {
-	std::cout << "\n\n\n";
+	std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 }
