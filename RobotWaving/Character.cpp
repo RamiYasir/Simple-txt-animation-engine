@@ -2,7 +2,7 @@
 
 Character::Character() {}
 
-
+ 
 void Character::waitForNextFrame() {
 	int number = AnimatedObject::m_waitTime;
 	std::this_thread::sleep_for(std::chrono::milliseconds(AnimatedObject::m_waitTime));

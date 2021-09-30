@@ -6,7 +6,7 @@
 #include <thread>
 #include <memory>
 #include "AnimatedObject.h"
-
+ 
 class Character : public AnimatedObject {
 public:
 	Character();

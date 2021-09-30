@@ -56,7 +56,7 @@ bool AnimatedObject::handleFPSInputErrors(int framesPerSecond) {
 		return true;
 	}
 }
-
+ 
 void AnimatedObject::setWaitTime() { m_waitTime = 1000 / m_framesPerSecond; }
 
 int AnimatedObject::getWaitTime() { return m_waitTime; }

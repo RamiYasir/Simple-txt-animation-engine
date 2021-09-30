@@ -8,7 +8,7 @@
 #include <fstream>
 #include "InputFramework.h"
 
-class AnimatedObject {
+class AnimatedObject { 
 public:
 	AnimatedObject();
 

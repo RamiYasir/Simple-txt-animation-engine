@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="AnimatedObject.cpp" />
+    <ClCompile Include="InputFramework.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
