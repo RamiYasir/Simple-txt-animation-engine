@@ -1,15 +1,16 @@
-#ifndef FRAMEWORK_H_
-#define FRAMEWORK_H_
+#ifndef ANIMATEDOBJECT_H_
+#define ANIMATEDOBJECT_H_
 
 #include <iostream>
 #include <vector>
 #include <chrono>
 #include <sstream>
 #include <fstream>
+#include "InputFramework.h"
 
-class AnimationFramework {
+class AnimatedObject {
 public:
-	AnimationFramework();
+	AnimatedObject();
 
 private:
 	//total count of animation frames (count number of image files loaded)
@@ -17,6 +18,8 @@ private:
 	int m_fileCounter{ 0 };
 	int m_lengthOfVector{ 0 };
 	int m_framesPerSecond{ 0 };
+	InputFramework inputFramework;
+
 
 protected:
 	int m_waitTime{ 1 };
@@ -26,7 +29,7 @@ protected:
 	std::vector<std::string> m_pathsToFiles;
 
 public:
-//	searchPathsToFiles();
+	//	searchPathsToFiles();
 	std::vector<std::string> storePathsToFiles(std::vector<std::string>& pathsToFiles);
 	void setCurrentPathToFile();
 	int getLengthOfVector();
@@ -38,6 +41,7 @@ private:
 
 protected:
 	void setLengthOfVector();
+	void setFramesPerSecond();
 	void setWaitTime();
 };
 

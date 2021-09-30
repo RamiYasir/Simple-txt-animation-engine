@@ -1,34 +1,39 @@
 #ifndef INPUTFRAMEWORK_H_
 #define INPUTFRAMEWORK_H_
 
-class InputFramework {
-public:
-	InputFramework();
-	
-protected:
-	askForDirectoryName();
-	collectFileNames();			//this will use the python script
-	checkForFileReadErrors();
-	void setFramesPerSecond();
+#include <iostream>
+#include <sstream>
 
+class InputFramework {
+public: 
+	InputFramework();
+
+	int setNumberFromOptions(const int numbers[], const int arraySize);
+//	void setNumberBetweenValues();
 };
 
-void InputFramework::setFramesPerSecond() {
+InputFramework::InputFramework() {};
+
+int InputFramework::setNumberFromOptions(const int numbers[], const int arraySize) {
 	std::string userInput;
-	int framesPerSecond;
+	int numbersOption;
 
-	do {
-		std::cout << "Please choose frames per second:\n60, 30, 24, 12: ";
-		std::cin >> userInput;
-		std::stringstream(userInput) >> framesPerSecond;
+	std::cin >> userInput;
+	std::stringstream(userInput) >> numbersOption;
 
-	} while (!handleFPSInputErrors(framesPerSecond));
-
-	m_framesPerSecond = framesPerSecond;
-
-	std::cout << std::endl;
-
-
+	try {
+		for (int i = 0; i < arraySize; i++) {
+			if (numbersOption == numbers[i]) {
+				std::cout << std::endl;
+				return numbersOption;
+			}
+			else return -1;
+		}
+	}
+	catch (const int numbers[]) {
+		std::cerr << "ERROR: array overflow, variable \'arraySize\' too big.";
+		return -1;
+	}
 }
 
-#endif // !INPUTFRAMEWORK_H_
+#endif

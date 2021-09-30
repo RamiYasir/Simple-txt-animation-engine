@@ -140,12 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="AnimationFramework.cpp" />
+    <ClCompile Include="AnimatedObject.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
-    <ClInclude Include="AnimationFramework.h" />
+    <ClInclude Include="AnimatedObject.h" />
     <ClInclude Include="Program.h" />
     <ClInclude Include="InputFramework.h" />
   </ItemGroup>

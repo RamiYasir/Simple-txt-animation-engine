@@ -1,7 +1,12 @@
-#include "Character.h"
-#include "ANimationFramework.h"
+#include <iostream>
+#include <vector>
 #include <chrono>
-#include <thread>
+#include <sstream>
+#include <fstream>
+#include "AnimatedObject.h"
+#include "InputFramework.h"
+#include "Character.h"
+
 
 int main() {
 	
